@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - đặt phòng khách sạn</title>
 
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     @Styles.Render("~/Content/css")
@@ -18,7 +18,7 @@
     <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
 </head>
 <body>
-    <partial name="_Notification" />
+    <partial name="_Notification.cshtml" />
     <header class="page-header" style="padding-bottom: 24px">
         <!-- RD Navbar-->
         <div class="rd-navbar-wrap">
@@ -78,36 +78,36 @@
                                 <div class="swiper-slide" data-slide-bg="./images/room-1.jpg">
                                     <div class="swiper-slide-caption">
                                         <div class="shell text-sm-left">
-                                            <h1 data-caption-animate="slideInDown" data-caption-delay="100">Your Ideal Retreat</h1>
+                                            <h1 data-caption-animate="slideInDown" data-caption-delay="100">Nơi nghỉ dưỡng lý tưởng của bạn</h1>
                                             <div class="slider-subtitle-group">
                                                 <div class="decoration-line" data-caption-animate="slideInDown" data-caption-delay="400"></div>
-                                                <h4 data-caption-animate="slideInLeft" data-caption-delay="700">Enjoy the world of relaxation</h4>
-                                                <h3 data-caption-animate="slideInLeft" data-caption-delay="800">and tranquility!</h3>
-                                            </div><a class="button button-effect-ujarak button-lg button-white-outline button-square" href="about-us.html" data-caption-animate="slideInLeft" data-caption-delay="1150"><span>learn more</span></a>
+                                                <h4 data-caption-animate="slideInLeft" data-caption-delay="700">Tận hưởng thế giới thư giản</h4>
+                                                <h3 data-caption-animate="slideInLeft" data-caption-delay="800">chất lượng</h3>
+                                            </div><a class="button button-effect-ujarak button-lg button-white-outline button-square" href="about-us.html" data-caption-animate="slideInLeft" data-caption-delay="1150"><span>tìm hiểu thêm</span></a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="swiper-slide" data-slide-bg="./images/room-2.jpg">
                                     <div class="swiper-slide-caption">
                                         <div class="shell text-sm-left">
-                                            <h1 data-caption-animate="slideInDown" data-caption-delay="100">Relax & Unwind</h1>
+                                            <h1 data-caption-animate="slideInDown" data-caption-delay="100">Thư giản và thư giản</h1>
                                             <div class="slider-subtitle-group">
                                                 <div class="decoration-line" data-caption-animate="slideInDown" data-caption-delay="400"></div>
-                                                <h4 data-caption-animate="slideInLeft" data-caption-delay="700">Experience the luxurious level</h4>
-                                                <h3 data-caption-animate="slideInLeft" data-caption-delay="800">of our spa treatments</h3>
-                                            </div><a class="button button-effect-ujarak button-lg button-white-outline button-square" href="about-us.html" data-caption-animate="slideInLeft" data-caption-delay="1150"><span>learn more</span></a>
+                                                <h4 data-caption-animate="slideInLeft" data-caption-delay="700">Trải nghiệm chất lượng thương gia</h4>
+                                                <h3 data-caption-animate="slideInLeft" data-caption-delay="800">với spa của chúng tôi</h3>
+                                            </div><a class="button button-effect-ujarak button-lg button-white-outline button-square" href="about-us.html" data-caption-animate="slideInLeft" data-caption-delay="1150"><span>tìm hiểu thêm</span></a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="swiper-slide" data-slide-bg="./images/room-3.jpg">
                                     <div class="swiper-slide-caption">
                                         <div class="shell text-sm-left">
-                                            <h1 data-caption-animate="slideInDown" data-caption-delay="100">Revitalize & Relax</h1>
+                                            <h1 data-caption-animate="slideInDown" data-caption-delay="100">Hồi sức & thư giãn</h1>
                                             <div class="slider-subtitle-group">
                                                 <div class="decoration-line" data-caption-animate="slideInDown" data-caption-delay="400"></div>
-                                                <h4 data-caption-animate="slideInLeft" data-caption-delay="700">Indulge in our top-notch</h4>
+                                                <h4 data-caption-animate="slideInLeft" data-caption-delay="700">Bao gồm dịch vụ chất lượng nhất</h4>
                                                 <h3 data-caption-animate="slideInLeft" data-caption-delay="800">spa resort</h3>
-                                            </div><a class="button button-effect-ujarak button-lg button-white-outline button-square" href="about-us.html" data-caption-animate="slideInLeft" data-caption-delay="1150"><span>learn more</span></a>
+                                            </div><a class="button button-effect-ujarak button-lg button-white-outline button-square" href="about-us.html" data-caption-animate="slideInLeft" data-caption-delay="1150"><span>tìm hiểu thêm</span></a>
                                         </div>
                                     </div>
                                 </div>
@@ -120,7 +120,6 @@
                     <div class="hotel-booking-form">
                         @*@Html.Action("DatPhong", "Phong")*@
                         <h3>Đặt Phòng</h3>
-                        RD Mailform
                         <form class="rd-mailform" data-form-output="form-output-global" action="@Url.Action("DatPhong", "Home")" method="post">
                             <div class="range range-sm-bottom spacing-20">
                                 <div class="cell-lg-12 cell-md-4">
@@ -176,18 +175,18 @@
                 <div class="cell-sm-10 cell-md-8 cell-lg-5 reveal-flex wow fadeInUp" data-wow-delay=".3s">
                     <div class="bg-primary section-wrap-content-var-1">
                         <div class="section-wrap-content-var-1-inner">
-                            <h2>About Us</h2>
-                            <p>Committed to everyone seeking energy and excitement, we offer endless possibilities to unwind and reenergize.</p>
+                            <h2>Về chúng tôi</h2>
+                            <p>Cam kết mang đến cho mọi người những người đang tìm kiếm năng lượng và sự phấn khích, chúng tôi mang đến những khả năng vô tận để thư giãn và tái tạo năng lượng.</p>
                             <div class="group">
                                 <dl class="list-desc">
-                                    <dt>Weekdays:</dt>
+                                    <dt>Ngày trong tuần:</dt>
                                     <dd><span>8:00–20:00</span></dd>
                                 </dl>
                                 <dl class="list-desc">
-                                    <dt>Weekends:</dt>
+                                    <dt>Cuối tuần:</dt>
                                     <dd><span>9:00–18:00</span></dd>
                                 </dl>
-                            </div><a class="button button-effect-ujarak button-lg button-secondary-outline button-square" href="about-us.html"><span>book now</span></a>
+                            </div><a class="button button-effect-ujarak button-lg button-secondary-outline button-square" href="about-us.html"><span>Đặt ngay</span></a>
                         </div>
                     </div>
                 </div>
@@ -199,9 +198,10 @@
         <div class="shell">
             <div class="range range-50 range-md-justify range-sm-middle">
                 <div class="cell-sm-6 cell-md-5">
-                    <h3>Indoor Hotel Pool</h3>
-                    <p>The indoor heated pool has vaulted wood beam ceilings. The whirlpool features bay windows and overlooks the pond and the north face of the local beauty spot. For the safety and health reasons, children must be accompanied by an adult when visiting the pool.</p>
-                    <p>The serene pool at Royal Villas spa resort and hotel boasts sleek décor that features striking floor-to-ceiling teak columns set against a cool black tile floor. Poolside dining is also available, featuring a selection of dishes from any cuisine you desire that are both healthy and delicious. Daily aqua aerobics classes help keep guests fit while on the road.</p><a class="button button-primary button button-square button-effect-ujarak button-lg" href="#"><span>read more</span></a>
+                    <h3>Hồ bơi trong nhà</h3>
+                    <p>Hồ bơi nước nóng trong nhà có trần dầm gỗ hình vòm. Bồn tạo sóng có cửa sổ lồi và nhìn ra ao cũng như mặt phía bắc của danh lam thắng cảnh địa phương. Vì lý do an toàn và sức khỏe, trẻ em phải có người lớn đi cùng khi đến hồ bơi.</p>
+                    <p>Hồ bơi nước nóng trong nhà có trần dầm gỗ hình vòm. Bồn tạo sóng có cửa sổ lồi và nhìn ra ao cũng như mặt phía bắc của danh lam thắng cảnh địa phương. Vì lý do an toàn và sức khỏe, trẻ em phải có người lớn đi cùng khi đến hồ bơi.</p>
+                    <a class="button button-primary button button-square button-effect-ujarak button-lg" href="#"><span>Đọc thêm</span></a>
                 </div>
                 <div class="cell-sm-6">
                     <div class="box-outline box-outline__mod-1">
@@ -218,9 +218,9 @@
         <div class="shell-wide">
             <div class="range range-10 range-middle">
                 <div class="cell-sm-6">
-                    <h3>Our Gallery</h3>
+                    <h3>Thư viện ảnh</h3>
                 </div>
-                <div class="cell-sm-6 text-sm-right"><a class="heading-link link-gray-darker" href="#">See All Photos</a></div>
+                <div class="cell-sm-6 text-sm-right"><a class="heading-link link-gray-darker" href="#">Xem tất cả</a></div>
             </div>
             <hr>
             <div class="isotope-wrap">
@@ -277,6 +277,7 @@
 
 
     <div class="body-content">
+        
         @RenderBody()
         <hr />
     </div>
@@ -288,7 +289,7 @@
                     <div class="range range-50">
                         <div class="cell-sm-6 cell-md-3 cell-lg-4 wow fadeInUp" data-wow-delay=".1s">
                             <div class="page-footer-minimal-inner">
-                                <h4>Opening Hours</h4>
+                                <h4>Thời gian mở</h4>
                                 <ul class="list-unstyled">
                                     <li>
                                         <div class="group-xs">
@@ -307,43 +308,30 @@
                                         </div>
                                     </li>
                                     <li>
-                                        <p class="rights"><span>&copy;&nbsp;</span><span>2019</span><span>&nbsp;</span><span class="copyright-year"></span>Royal Villas. All Rights Reserved. Design by <a href="https://www.templatemonster.com">TemplateMonster</a></p>
+                                        <p class="rights"><span>&copy;&nbsp;</span><span>2019</span><span>&nbsp;</span><span class="copyright-year"></span>QUẢN LÝ KHÁCH SẠN <a href="https://www.templatemonster.com">MÔN LẬP TRÌNH ỨNG DỤNG THÔNG MINH</a></p>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                         <div class="cell-sm-6 cell-md-5 cell-lg-4 wow fadeInUp" data-wow-delay=".2s">
                             <div class="page-footer-minimal-inner">
-                                <h4>Address</h4>
+                                <h4>Địa chỉ</h4>
                                 <ul class="list-unstyled">
                                     <li>
                                         <dl class="list-desc">
                                             <dt><span class="icon icon-sm mdi mdi-map-marker"></span></dt>
-                                            <dd><a class="link link-gray-darker" href="#">6036 Richmond hwy., Alexandria, VA, 2230</a></dd>
+                                            <dd><a class="link link-gray-darker" href="#">Trường đại học Công Thương TP. HCM</a></dd>
                                         </dl>
                                     </li>
                                     <li>
                                         <dl class="list-desc">
                                             <dt><span class="icon icon-sm mdi mdi-phone"></span></dt>
                                             <dd class="text-gray-darker">
-                                                Call Us: <a class="link link-gray-darker" href="tel:#">+1 (409) 987–5874</a>
+                                                Liên hệ: <a class="link link-gray-darker" href="tel:#">+84 123456768</a>
                                             </dd>
                                         </dl>
                                     </li>
                                 </ul>
-                            </div>
-                        </div>
-                        <div class="cell-sm-8 cell-md-4 wow fadeInUp" data-wow-delay=".3s">
-                            <div class="page-footer-minimal-inner-subscribe">
-                                <h4>Join Our Newsletter</h4>
-                                <!-- RD Mailform-->
-                                <form class="rd-mailform rd-mailform-inline form-center" data-form-output="form-output-global" data-form-type="subscribe" method="post" action="bat/rd-mailform.php">
-                                    <div class="form-wrap">
-                                        <input class="form-input" id="subscribe-email" type="email" name="email" data-constraints="">
-                                        <label class="form-label" for="subscribe-email">Enter your e-mail</label>
-                                    </div>
-                                    <button class="button button-primary-2 button-effect-ujarak button-square" type="submit"><span>Subscribe</span></button>
-                                </form>
                             </div>
                         </div>
                     </div>
