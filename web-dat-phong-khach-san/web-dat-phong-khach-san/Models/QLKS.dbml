@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QL_KHACHSAN" Class="QLKSDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="dbo.DATPHONG_WEB" Member="DATPHONG_WEBs">
+    <Type Name="DATPHONG_WEB">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TEN_KHACHHANG" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NGAYDEN" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NGAYDI" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SODIENTHOAI" Type="System.String" DbType="Char(15)" CanBeNull="true" />
+      <Column Name="TRANGTHAI" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

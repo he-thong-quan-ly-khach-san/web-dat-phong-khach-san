@@ -1,0 +1,45 @@
+﻿@model web_dat_phong_khach_san.Models.DATPHONG_WEB
+
+
+
+<h3>Đặt Phòng</h3>
+<!-- RD Mailform-->
+@using (Html.BeginForm("DatPhong", "Phong", FormMethod.Post, new { @class = "rd-mailform" }))
+{
+    <div class="range range-sm-bottom spacing-20">
+        <div class="cell-lg-12 cell-md-4">
+            <p class="text-uppercase">Tên của bạn</p>
+            <div class="form-wrap">
+                @Html.TextBoxFor(model => model.TEN_KHACHHANG, new { @class = "form-input", id = "contact-first-name" })
+                @*<input class="form-input" id="contact-first-name" type="text" name="name" data-constraints="">*@
+                <label class="form-label" for="contact-first-name">Your full Name</label>
+            </div>
+        </div>
+        <div class="cell-lg-12 cell-md-4 cell-sm-6">
+            <p class="text-uppercase">Ngày đến</p>
+            <div class="form-wrap">
+                <label class="form-label form-label-icon" for="date-in"><span class="icon icon-primary fa-calendar"></span><span>Check-in Date</span></label>
+                <input class="form-input" id="date-in" data-time-picker="date" type="text" name="date" data-constraints="">
+            </div>
+        </div>
+        <div class="cell-lg-12 cell-md-4 cell-sm-6">
+            <p class="text-uppercase">Ngày đi</p>
+            <div class="form-wrap">
+                <label class="form-label form-label-icon" for="date-out"><span class="icon icon-primary fa-calendar"></span><span>Check-out Date</span></label>
+                <input class="form-input" id="date-out" data-time-picker="date" type="text" name="date" data-constraints="">
+            </div>
+        </div>
+        <div class="cell-lg-12 cell-md-4 cell-sm-6">
+            <p class="text-uppercase">Số điện thoại</p>
+            <div class="form-wrap">
+                <label class="form-label form-label-icon" for="date-out"><span class="icon icon-primary fa-phone"></span><span>Phone</span></label>
+                <input class="form-input" id="date-out" type="text" name="date" data-constraints="">
+            </div>
+        </div>
+        <div class="cell-lg-12 cell-md-4">
+            <button class="button button-primary button-square button-block button-effect-ujarak" type="submit"><span>Xác nhận đặt phòng</span></button>
+        </div>
+    </div>
+}
+
+
